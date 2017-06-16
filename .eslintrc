@@ -1,0 +1,35 @@
+{
+  parser: "babel-eslint",
+  extends: 'airbnb-base',
+  env: {
+    node: true,
+    browser: true,
+    es6: true
+  },
+  rules: {
+    "arrow-parens": [2, 'as-needed', {
+      "requireForBlockBody": false
+    }],
+    "no-console": ["error", {
+      allow: ["info", "warn", "error", "time", "timeEnd"]
+    }]
+  },
+  settings": {
+    targets: ['chrome >= 50', 'firefox', 'edge', 'ie >= 9', 'safari >= 9'],
+    coverage: false,
+    compiler: 'babel'
+  },
+  globals": {
+    fetch: false,
+    document: true,
+    localStorage: true,
+    window: true,
+    Generator: true
+  },
+  parserOptions": {
+    ecmaVersion: 6,
+    ecmaFeatures: {
+      experimentalObjectRestSpread: true
+    }
+  },
+}
