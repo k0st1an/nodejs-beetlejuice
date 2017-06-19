@@ -4,17 +4,12 @@ import { getToken, sendMsg } from '../lib/sendpulse';
 
 const router = express.Router();
 
-const SendMsg = router.get(getUrl('api.send'), async (req, res) => {
-  try {
-    const token = await getToken(req);
-    const r = await sendMsg(token, 'TEST msg', 'Subject');
+const SendMsg = router.post(getUrl('api.send'), async (req, res) => {
+  const { from, to, subject, msg } = req.body;
+  const token = await getToken(req);
+  const r = await sendMsg(token, from, to, msg, subject);
 
-    console.error('send msg result:', r);
-  } catch (error) {
-    res.status(500).json();
-  }
-
-  res.status(200).json({ status: true });
+  res.status(r.result ? 200 : 400).json(r);
 });
 
 export default SendMsg;
