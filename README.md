@@ -1,6 +1,6 @@
 # Beetlejuice
 
-Send email
+Send email using https://sendpulse.com/.
 
 ## run server
 
