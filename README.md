@@ -31,10 +31,16 @@ Example:
     "name": "Name",
     "email": "no-reply@domain.ru"
   },
-  "to": {
-    "name": "Konstantin Kruglov",
-    "email": "kruglovk@gmail.com"
-  },
+  "to": [
+    {
+      "name": "Konstantin Kruglov",
+      "email": "kruglovk@gmail.com"
+    },
+    {
+      "name": "Ivanov Ivan",
+      "email": "ivan@domain.com",
+    }
+  ],
   "subject": "Hey!",
   "msg": "Hello, bro!"
 }
