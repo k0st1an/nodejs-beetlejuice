@@ -8,7 +8,7 @@ const isAuthentication = (req: Object, res: Object, next: Function) => {
 
   if (definedToken && token) {
     // Authorization: Token 1234 => 1234
-    if (definedToken === Number(token.slice(6))) return next();
+    if (String(definedToken) === token.slice(6)) return next();
   }
 
   return res.status(401).json();
