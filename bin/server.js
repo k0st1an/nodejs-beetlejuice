@@ -5,7 +5,7 @@
  */
 
 var app = require('../app');
-var debug = require('debug')('nodejs-beetlejuice:server');
+var debug = require('debug')('beetlejuice:server');
 var http = require('http');
 
 /**

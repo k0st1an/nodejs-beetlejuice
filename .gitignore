@@ -9,4 +9,5 @@ coverage
 node_modules
 npm-debug.log
 configs/auth.json
-json/testMsg.json
+json/
+build/
